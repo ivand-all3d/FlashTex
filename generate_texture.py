@@ -318,7 +318,7 @@ def direct_optimization_nvdiffrast(args, mesh_dict, target_images, target_masks,
 
         write_360_video_diffrast(renderers['testing'], output_filename=f"{optimization_output_dir}/{guidance}_final_rgb_up.gif", elev=-30)
         
-        shutil.copyfile(f'{optimization_output_dir}/{guidance}_final_rgb.gif', f'{args.output_dir}/video360.gif')
+        #shutil.copyfile(f'{optimization_output_dir}/{guidance}_final_rgb.gif', f'{args.output_dir}/video360.gif')
     
     optimizer3d.export_mesh(optimization_output_dir, textured_mesh.textures.verts_uvs_padded().squeeze(0), textured_mesh.textures.faces_uvs_padded().squeeze(0))
     shutil.copyfile(f'{optimization_output_dir}/texture_kd.png', f'{args.output_dir}/texture_kd.png')
